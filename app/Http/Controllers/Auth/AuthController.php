@@ -52,6 +52,7 @@ class AuthController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:6|confirmed',
+            'subscription' => 'required'
         ]);
     }
 
@@ -62,11 +63,27 @@ class AuthController extends Controller
      * @return User
      */
     protected function create(array $data)
-    {
+    {   
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
+            'subscription' => $data['subscription']
         ]);
+    }
+    
+    /**
+     * Once authenticated, check user's role/type
+     * @param  Request $request 
+     * @param  App\User $user    
+     * @return Redirect          
+     */
+    protected function authenticated($request, $user)
+    {
+        if($user->isAdmin === 1) {
+            return redirect()->intended('/backend');
+        }
+
+        return redirect()->intended('/');
     }
 }
