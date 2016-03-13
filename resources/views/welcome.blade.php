@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     @include('errors.list')
                     
-                    HOME
+                    Welcome To Sales Chain System
                 </div>
             </div>
         </div>

@@ -35,7 +35,14 @@ class User extends Authenticatable
         $query->where( 'isAdmin', '=', $isAdmin );
     }
 
-
+    /**
+     * DB - Relationship
+     * @return  a User can make many orders
+     */
+    public function orders()
+    {
+        return $this->hasMany('App\Order');
+    }
 
 
 

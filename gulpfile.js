@@ -8,18 +8,18 @@ elixir(function(mix) {
         'styles.css']);
 
     // Frontend js
-    mix.scripts([
-    	'jquery.min.js',
-    	'bootstrap.min.js',
-        'notifIt.js',
-    	'vue.js'
-    ]);
+    // mix.scripts([
+    // 	'jquery.min.js',
+    // 	'bootstrap.min.js',
+    //     'notifIt.js',
+    // 	'vue.js'
+    // ], 'public/js/frontend/all.js');
 
-    // Backend js
-    mix.scripts([
-    	'jquery.min.js',
-    	'bootstrap.min.js',
-        'notifIt.js',
-    	'vue.js'
-    ], 'public/js/backend.js');
+    // // Backend js
+    // mix.scripts([
+    // 	'jquery.min.js',
+    // 	'bootstrap.min.js',
+    //     'notifIt.js',
+    // 	'vue.js'
+    // ], 'public/js/backend/all.js');
 });

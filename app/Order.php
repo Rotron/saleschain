@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Order extends Model
 {	
-	protected $fillable = ['user_id', 'item_id', 'qty', 'purchase_id'];
-	protected $table = 'orders';
+	protected $fillable = ['user_id', 'item_id', 'qty', 'receipt_id'];
+	protected $table    = 'orders';
 
 	/**
 	 * DB - Relationship
@@ -16,5 +16,14 @@ class Order extends Model
     public function item()
     {
     	return $this->belongsTo("App\Item");
+    }
+
+    /**
+     * DB - Relationship
+     * @return  each order belongs to a use
+     */
+    public function user()
+    {
+    	return $this->belongsTo("App\User");
     }
 }

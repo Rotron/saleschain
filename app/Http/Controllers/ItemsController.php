@@ -10,6 +10,22 @@ class ItemsController extends Controller
 {
     /**
      * AJAX
+     * Search itmes 
+     * @param  Request $request json
+     * @return list           
+     */
+    public function search(Request $request)
+    {
+        $value = "%".$request['name']."%";
+        // filter more (available)
+        if ($request['cat'] != 0) {
+            return Item::where('category_id', '=', $request['cat'])
+                        ->where('name', 'like', $value)->get();        
+        }
+        return Item::where('name', 'like', $value)->get();
+    }
+    /**
+     * AJAX
      * Create new instance
      * @param  \Illuminate\Http\Request  $request
      * @param  int 
@@ -27,7 +43,11 @@ class ItemsController extends Controller
             'available'   => $item['available']
         ]);
 
-        return response()->json(['success' => 200, 'id' => $newItem->id]);
+        if ($newItem->save()){
+            return response()->json(['success' => 200, 'id' => $newItem->id]);
+        }
+        return 0;
+
     }
 
     /**

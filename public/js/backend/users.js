@@ -8,7 +8,8 @@ var Child = Vue.component('edituser', {
 	
 	data: function () {
     	return { 
-			subscriptions: ['Platinum', 'Gold', 'Silver', 'Bronze']
+			subscriptions: ['Platinum', 'Gold', 'Silver', 'Bronze'],
+			approval: ['Yes', 'No']
     	};
   	},
   	methods: {
@@ -35,7 +36,6 @@ new Vue({
 	data: {
 		users: [],
 		search: '',
-		index: '',
 		current: '',
 		sortKey: 'approved',
 		orderKey: 1,
@@ -80,14 +80,13 @@ new Vue({
 			}
 		},
 		
-		editUser: function(index) {
-			this.index = index;
-			this.current = jQuery.extend({}, this.users[index]);
+		editUser: function(user) {
+			this.current = jQuery.extend({}, user);
 		},
 
-		deleteUser: function(index) {
-			var user = this.users[index];
+		deleteUser: function(user) {
 			var that = this;
+			
 			notif_confirm({
 				'textaccept': 'Yes',
 				'textcancel': 'Cancel',

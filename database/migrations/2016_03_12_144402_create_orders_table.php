@@ -17,8 +17,12 @@ class CreateOrdersTable extends Migration
             $table->integer('item_id')->unsigned();
             $table->integer('user_id')->unsigned();
             $table->integer('qty');
-            $table->string('purchase_id');
+            $table->string('receipt_id');
             $table->timestamps();
+
+            $table->foreign('item_id')->references('id')->on('items');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->engine= 'InnoDB';
         });
     }

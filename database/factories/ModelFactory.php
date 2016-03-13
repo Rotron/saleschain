@@ -21,3 +21,32 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
 		'remember_token' => str_random(10),
     ];
 });
+
+
+$factory->define(App\Category::class, function (Faker\Generator $faker) {
+    return [
+		'name'           => $faker->randomElement(['Food', 'Drink', 'Spirits']),
+		'available'      => 1
+    ];
+});
+
+$factory->define(App\Item::class, function (Faker\Generator $faker) {
+    return [
+		'name'           => $faker->name,
+		'price'          => $faker->randomFloat(2, 50, 200),
+		'qty'          	 => $faker->numberBetween(40, 194),
+		'category_id'    => $faker->randomElement([1, 2, 3]),
+		'available'      => $faker->randomElement(['1', '0'])
+    ];
+});
+
+
+
+
+
+
+
+
+
+
+

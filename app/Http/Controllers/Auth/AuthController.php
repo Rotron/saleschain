@@ -80,7 +80,7 @@ class AuthController extends Controller
      */
     protected function authenticated($request, $user)
     {
-        if($user->isAdmin === 1) {
+        if($user->isAdmin == 1) {
             return redirect()->intended('/backend');
         }
 

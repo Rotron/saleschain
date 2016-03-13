@@ -31,8 +31,11 @@ Route::group(['middleware' => 'web'], function () {
 	
     Route::auth();
 
-    Route::get('/home', 'HomeController@index');
-
+    Route::get('/store', 'HomeController@index');
+    Route::get('/profile', 'HomeController@profile');
+    Route::post('/profile', 'HomeController@requestChange');
+    
+    Route::post('/purchase', 'OrdersController@purchase');
     // Web
     Route::get('/backend', 'AdminController@index');
     Route::get('/backend/users', 'AdminController@users');
@@ -51,6 +54,7 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/backend/categories/{cat}', 'CategoriesController@show');
 
     // backend/items 
+    Route::post('/backend/items/search', 'ItemsController@search');
     Route::post('/backend/items/create', 'ItemsController@create');
     Route::post('/backend/items/update', 'ItemsController@update');
     Route::post('/backend/items/delete', 'ItemsController@destroy');

@@ -135,4 +135,23 @@
 .clickable {
 	cursor: pointer;
 }
+.table td, th {
+   text-align: center;  
+   font-size: 16px; 
+   vertical-align: middle !important;
+}
+
+.qtyBox {
+	width: 55px !important;
+}
+
+.navbar-nav {
+    font-size: 16.5px !important;
+}
+
+.navbar-right > li {
+    font-size: 14px !important;
+}
+
+
 /*# sourceMappingURL=all.css.map */

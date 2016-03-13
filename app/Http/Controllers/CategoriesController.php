@@ -51,7 +51,10 @@ class CategoriesController extends Controller
             'available' => $cat['available']
         ]);
 
-        return response()->json(['success' => 200, 'id' => $newCat->id]);
+        if ($newCat->save()) {
+            return response()->json(['success' => 200, 'id' => $newCat->id]);
+        }
+        return 0;
     }
 
     /**

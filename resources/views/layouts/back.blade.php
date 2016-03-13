@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <title>System @yield('title') </title>
-
     <link rel="stylesheet" href="/css/all.css">
     
     <meta name="csrf-token" content="{{ csrf_token() }}" />
@@ -26,15 +25,15 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/backend') }}">
-                    SalesChain
+                    <b>SalesChain</b>
                 </a>
             </div>
 
             <div class="collapse navbar-collapse" id="app-navbar-collapse">
                 <!-- Left Side Of Navbar -->
-               <!--  <ul class="nav navbar-nav">
+                <ul class="nav navbar-nav">
                     <li><a href="{{ url('/backend') }}">Dashboard</a></li>
-                </ul> -->
+                </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
@@ -58,7 +57,7 @@
    
     </div>
     <!-- JavaScripts -->
-    <script src="/js/backend.js"> </script>
+    <script src="/js/backend/all.js"> </script>
     <script>
         $.ajaxSetup({headers: {'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')}});
     </script>
