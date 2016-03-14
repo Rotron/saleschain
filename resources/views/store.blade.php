@@ -44,18 +44,16 @@
 
 <div v-show="items.length > 0" class="row">
     
-    
-<div v-show="cart.length > 0" class="row">
-    <div class="row pull-right"> 
+    <div v-show="cart.length > 0" class="row pull-right"> 
         <h3 class="clickable" v-on:click="viewCart = true">
             <span class="glyphicon glyphicon-shopping-cart"></span> Cart (@{{cart.length}})
         </h3> 
     </div>
-    
+
     <div v-show="viewCart" class="col-md-6 col-md-offset-3">
         @include('frontend.partials.cart')
     </div>
-</div>
+
 
     <div class="col-md-10 col-md-offset-1">
         <table class="table table-striped">
