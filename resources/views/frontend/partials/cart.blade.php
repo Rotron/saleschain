@@ -11,7 +11,7 @@
         <table class="table">
             <tr v-for = "order in cart" >
                 <td> @{{ order.name }} </td>
-                <td> @{{ order.price }} </td>
+                <td>$ @{{ order.price }} </td>
                 <td style="width:10%">    
                     <div class="input-group" style="width:100px" >
                         {{-- decrement --}}
@@ -37,7 +37,7 @@
                     <div class="input-group" style="width:100px" >
                         <span class="input-group-btn">
                             &nbsp;&nbsp;
-                            <span v-on:click="cart.$remove(order);" aria-hidden="true"
+                            <span v-on:click="removeOrder(order)" aria-hidden="true"
                                 style="border-radius: 44px;" 
                                 class="glyphicon glyphicon-remove btn btn-sm btn-danger" >
                             </span>

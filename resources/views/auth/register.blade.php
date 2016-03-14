@@ -92,4 +92,12 @@
         </div>
     </div>
 </div>
+@section('scripts')
+<script>
+    (function () {
+      $("li.active").removeClass('active');
+      $("li.Register").addClass('active');
+    })();
+</script>
+@stop
 @endsection

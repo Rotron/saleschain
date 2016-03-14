@@ -39,8 +39,10 @@ Route::group(['middleware' => 'web'], function () {
     // Web
     Route::get('/backend', 'AdminController@index');
     Route::get('/backend/users', 'AdminController@users');
+    Route::get('/backend/settings', 'AdminController@settings');
     Route::get('/backend/store', 'AdminController@store');
     Route::get('/backend/categories', 'CategoriesController@index');
+    Route::post('/backend/changeSub', 'AdminController@changeSub');
 
     /*----------------------------------------
     | AJAX

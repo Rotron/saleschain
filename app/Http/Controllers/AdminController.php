@@ -25,8 +25,24 @@ class AdminController extends Controller
      */
     public function index()
     {
+        $subscriptions = \DB::table('subscriptions')
+                                    ->select('id', 'interest', 'name')->get();
         $waiting = User::users()->where('approved', '=', 0)->count();
-    	return view('backend.dashboard',compact('waiting'));	
+    	return view('backend.dashboard',compact('waiting', 'subscriptions'));	
+    }
+
+    /**
+     * Change subscription interest rate
+     * @param  Request $request 
+     * @return Redirect back()           
+     */
+    public function changeSub(Request $request)
+    {
+        \DB::table('subscriptions')
+            ->where('id', $request['id'])
+                ->update(['interest' => $request['interest']]);
+
+        return redirect()->back();
     }
 
     /**
@@ -45,6 +61,18 @@ class AdminController extends Controller
     public function store()
     {
         return view('backend.store');   
+    }
+
+    /**
+     * Settings View
+     * @return View 
+     */
+    public function settings()
+    {
+        $subscriptions = \DB::table('subscriptions')
+                                    ->select('id', 'interest', 'name')->get();
+
+        return view('backend.settings', compact('subscriptions'));   
     }
 
     /**

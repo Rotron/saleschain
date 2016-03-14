@@ -46,6 +46,11 @@
 
 
 @section('scripts')
-<script src="/js/frontend/store.js"> </script>
+<script>
+(function () {
+    $("li.active").removeClass('active');
+    $("li.User").addClass('active');
+})();
+</script>
 
 @stop

@@ -102,6 +102,11 @@ new Vue({
 					this.cart     = [];
 				}
 			}.bind(this));
+		},
+
+		removeOrder: function(order){
+			this.cart.$remove(order);
+			(this.cart.length > 0) ? '' : this.viewCart = false;
 		}
 	} 
 });

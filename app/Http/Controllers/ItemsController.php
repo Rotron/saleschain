@@ -9,6 +9,17 @@ use Illuminate\Http\Request;
 class ItemsController extends Controller
 {
     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth', ['only' => 'search']);
+        $this->middleware('admin', ['except' => 'search']);
+    }
+
+    /**
      * AJAX
      * Search itmes 
      * @param  Request $request json

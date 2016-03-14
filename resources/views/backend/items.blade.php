@@ -26,7 +26,7 @@
 		</a>
 	</div>
 	<div class="col-md-3 pull-right">
-		<button v-show="current===''" v-on:click="current = {available:'1'}"
+		<button v-show="current===''" v-on:click="current = {available:'1',category_id:'{{$cat->id}}'}"
 			class="btn btn-success btn-lg" >
 			<span class="glyphicon glyphicon-plus"></span>  
 			Add Item
@@ -36,7 +36,11 @@
 <hr>
 
 <div class="row">
-	<h3><span class="glyphicon glyphicon-tag"></span>&nbsp;&nbsp;  {{$cat->name}}</h3>
+	<h3>
+		<span class="glyphicon glyphicon-tag"></span> &nbsp;&nbsp;  
+		{{$cat->name}}
+	</h3>
+
 	<div class="col-md-10 col-md-offset-1">
 		<table class="table table-striped">
 			<thead>
