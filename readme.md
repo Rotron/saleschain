@@ -15,6 +15,10 @@ Diagram
 ![Diagram](https://raw.githubusercontent.com/mustafawm/saleschain/master/SalesChainManagement.png)
 
 
+## Demo:
+https://saleschainmng.herokuapp.com/
+> Users must be approved to be able to perform searching/purchasing actions.
+ 
 
 # Solution included the following:
 
