@@ -12,7 +12,7 @@ Sales Chain System
 Diagram
 ------------
 
-![Diagram](https://raw.githubusercontent.com/mustafawm/saleschainm/master/SalesChainManagement.png)
+![Diagram](https://raw.githubusercontent.com/mustafawm/saleschain/master/SalesChainManagement.png)
 
 
 
