@@ -4,7 +4,7 @@ Sales Chain Management
 
 ### Sales Chain Management  
 
-- **Basic Requirement: ** a luxurious cosmetics company wants to create hierarchical sales system for direct online sales without agents
+- **Basic Requirement:** a luxurious cosmetics company wants to create hierarchical sales system for direct online sales without agents
 - **Membership registration:** some key user information.  Only registered member can use the site.  There are four levels of members:  Platinum, Gold, Silver, and Bronze.  Membership has to be approved manually
 - **Shopping cart:**  online users are able to search different products within different categories.  Different level of member see different prices.
 
@@ -20,8 +20,8 @@ https://saleschainmng.herokuapp.com/
 > Users must be approved to be able to perform searching/purchasing actions.
  
 
-# Solution included the following:
 
+## Getting Started:
 > **`.env`:**
 > 
 >APP_KEY=key (generate one `php artisan key:generate` )
@@ -66,9 +66,9 @@ https://saleschainmng.herokuapp.com/
 
  > **Technologies used:**
 
-> - Laravel (_obviously_).
+> - Laravel (_obviously_)
 > - MySQL
-> - VueJS.
+> - VueJS
 > - jQuery
 > - Bootstrap (BootSwatch)
 
@@ -76,3 +76,7 @@ https://saleschainmng.herokuapp.com/
 ---
  > **NOTICE:**
  > No **charging** is implemented yet. 
+
+
+## LICENSE
+**GPL**
