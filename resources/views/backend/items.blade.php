@@ -14,7 +14,7 @@
 	<hr>
 	<div class="col-md-6 col-md-offset-3">
 		<!-- vue component -->
-		<editcat :item="current" :index="index" :cats="cats"></editcat>	
+		<edititem :item="current" :index="index" :cats="cats"></edititem>	
 	</div>	
 </div>
 <div class="row">

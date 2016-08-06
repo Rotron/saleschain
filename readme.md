@@ -22,22 +22,17 @@ https://saleschainmng.herokuapp.com/
 
 
 ## Getting Started:
-> **`.env`:**
-> 
->APP_KEY=key (generate one `php artisan key:generate` )
->
->DB_HOST=_DB-IP-Address_
->
->DB_PORT=_PORT#_
->
->DB_DATABASE=_DB-NAME_
->
->DB_USERNAME=_DB-USER_
->
->DB_PASSWORD=_DB-PASSWORD_
+ **`.env`:**
+ 
+APP_KEY=key (generate one `php artisan key:generate` )
+DB_HOST=_DB-IP-Address_
+DB_PORT=_PORT#_
+DB_DATABASE=_DB-NAME_
+DB_USERNAME=_DB-USER_
+DB_PASSWORD=_DB-PASSWORD_
 
 ----
-
+## System design
  **Models:**
 
  - **Category** 
@@ -45,7 +40,6 @@ https://saleschainmng.herokuapp.com/
  - **Order**
  - **User**  
 
---------
 
  **Controllers:**
 
@@ -54,7 +48,6 @@ https://saleschainmng.herokuapp.com/
  - **HomeController**
  - **OrdersController** 
 
---------
 
  **MiddleWares:**
 
@@ -64,18 +57,18 @@ https://saleschainmng.herokuapp.com/
 
 ----
 
- > **Technologies used:**
+**Technologies used:**
 
-> - Laravel (_obviously_)
-> - MySQL
-> - VueJS
-> - jQuery
-> - Bootstrap (BootSwatch)
+- Laravel (_obviously_)
+- MySQL
+- VueJS
+- jQuery
+- Bootstrap (BootSwatch)
 
 
----
- > **NOTICE:**
- > No **charging** is implemented yet. 
+
+> **NOTICE:**
+> No **charging** is implemented yet. 
 
 
 ## LICENSE

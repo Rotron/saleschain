@@ -24,7 +24,7 @@ new Vue({
 	el: 'body',
 
 	components: {
-		editcat: Child
+		edititem: Child
 	},
 
 	data: {
