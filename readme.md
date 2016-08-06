@@ -22,19 +22,20 @@ https://saleschainmng.herokuapp.com/
 
 
 ## Getting Started:
- **`.env`:**
+1. Configure `.env` file:
  
-APP_KEY=key (generate one `php artisan key:generate` )
+    APP_KEY=key (generate one `php artisan key:generate` )
 
-DB_HOST=_DB-IP-Address_
+    DB_HOST=_DB-IP-Address_
 
-DB_PORT=_PORT#_
+    DB_PORT=_PORT#_
 
-DB_DATABASE=_DB-NAME_
+    DB_DATABASE=_DB-NAME_
 
-DB_USERNAME=_DB-USER_
+    DB_USERNAME=_DB-USER_
 
-DB_PASSWORD=_DB-PASSWORD_
+    DB_PASSWORD=_DB-PASSWORD_
+2. Migrate DB: `php artisan migrate`
 
 ----
 ## System design
