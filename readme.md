@@ -33,42 +33,30 @@ DB_PASSWORD=_DB-PASSWORD_
 
 ----
 ## System design
- **Models:**
+**Models:**
 
- - **Category** 
- - **Item** 
- - **Order**
- - **User**  
-
-
- **Controllers:**
-
- - **AdminController** 
- - **CategoriesController** 
- - **HomeController**
- - **OrdersController** 
+- **Category** 
+- **Item** 
+- **Order**
+- **User**  
 
 
- **MiddleWares:**
+**Controllers:**
 
- - **Auth** 
- - **Approved** 
- - **Admin**
+- **AdminController** 
+- **CategoriesController** 
+- **HomeController**
+- **OrdersController** 
+
+**Middlewares:**
+
+- **Auth** 
+- **Approved** 
+- **Admin**
 
 ----
 
-**Technologies used:**
-
-- Laravel (_obviously_)
-- MySQL
-- VueJS
-- jQuery
-- Bootstrap (BootSwatch)
-
-
-
-> **NOTICE:**
-> No **charging** is implemented yet. 
+> **NOTICE:** no charging is implemented yet. 
 
 
 ## LICENSE
